@@ -1,8 +1,8 @@
 from main import *
-from webbrowser import open
-from words import words
-from random import choice
 from UI import *
+from words import words
+from webbrowser import open
+from random import choice
 
 class UIFunctions(MainWindow):
     
@@ -20,5 +20,20 @@ class UIFunctions(MainWindow):
         word = choice(words)
         return word
     
+    random_word = get_random_word()
+    
+    def check_if_letters_in_word(self):
+        guess = self.ui.entry_guess.text().upper()
+        print(UIFunctions.random_word)
+        
     def get_guess(self):
-        print(self.ui.entry_guess.text())
+        guess = self.ui.entry_guess.text().upper()
+        self.ui.label_previous_guess.setText(guess)
+        
+        letters_in_word = []
+        for letter in guess:
+            if letter in UIFunctions.random_word:
+                letters_in_word.append(letter)
+        print(UIFunctions.random_word)
+        
+        UIFunctions.check_if_letters_in_word(self)
