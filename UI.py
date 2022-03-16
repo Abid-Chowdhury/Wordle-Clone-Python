@@ -15,6 +15,7 @@ from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont,
     QRadialGradient)
 from PySide2.QtWidgets import *
 
+GLOBAL_STATE = 0
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -141,3 +142,5 @@ class Ui_MainWindow(object):
         self.button_credit.setText(QCoreApplication.translate("MainWindow", u"Github.com/Abid-Chowdhury", None))
     # retranslateUi
 
+    def return_status():
+        return GLOBAL_STATE    
