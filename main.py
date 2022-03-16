@@ -1,15 +1,20 @@
-import sys
 import platform
+import sys
+
 from PySide2 import QtCore, QtGui, QtWidgets
-from PySide2.QtCore import (QCoreApplication, QPropertyAnimation, QDate, QDateTime, QMetaObject, QObject, QPoint, QRect, QSize, QTime, QUrl, Qt, QEvent)
-from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont, QFontDatabase, QIcon, QKeySequence, QLinearGradient, QPalette, QPainter, QPixmap, QRadialGradient)
+from PySide2.QtCore import (QCoreApplication, QDate, QDateTime, QEvent,
+                            QMetaObject, QObject, QPoint, QPropertyAnimation,
+                            QRect, QSize, Qt, QTime, QUrl)
+from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont,
+                           QFontDatabase, QIcon, QKeySequence, QLinearGradient,
+                           QPainter, QPalette, QPixmap, QRadialGradient)
 from PySide2.QtWidgets import *
 
+# import functions
+from functions import *
 # GUI file
 from UI import *
 
-# import functions
-from functions import * 
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -39,7 +44,8 @@ class MainWindow(QMainWindow):
         # functions
         self.ui.button_close.clicked.connect(lambda: UIFunctions.close_window(self))
         self.ui.button_minimize.clicked.connect(lambda: UIFunctions.minimize_window(self))
-        self.ui.button_credit.clicked.connect(lambda: UIFunctions.credit_button(self))
+        self.ui.button_credit.clicked.connect(lambda: UIFunctions.credit_button())
+        self.ui.button_guess.clicked.connect(lambda: UIFunctions.get_guess(self))
         
         # show the window
         self.show()
