@@ -34,11 +34,11 @@ class MainWindow(QMainWindow):
                 self.dragPos = event.globalPos()
                 event.accept()
         
-        self.ui.frame.mouseMoveEvent = move_window
+        self.ui.frame.mouseMoveEvent = move_window  
         
         # functions
         self.ui.button_close.clicked.connect(lambda: UIFunctions.close_window(self))
-        
+        self.ui.button_minimize.clicked.connect(lambda: UIFunctions.minimize_window(self))
         # show the window
         self.show()
         
