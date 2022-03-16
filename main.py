@@ -39,6 +39,8 @@ class MainWindow(QMainWindow):
         # functions
         self.ui.button_close.clicked.connect(lambda: UIFunctions.close_window(self))
         self.ui.button_minimize.clicked.connect(lambda: UIFunctions.minimize_window(self))
+        self.ui.button_credit.clicked.connect(lambda: UIFunctions.credit_button(self))
+        
         # show the window
         self.show()
         
