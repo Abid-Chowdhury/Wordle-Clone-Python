@@ -15,7 +15,6 @@ from functions import *
 # GUI file
 from UI import *
 
-
 class MainWindow(QMainWindow):
     def __init__(self):
         QMainWindow.__init__(self)

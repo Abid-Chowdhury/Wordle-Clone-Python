@@ -22,7 +22,9 @@ class UIFunctions(MainWindow):
     
     random_word = get_random_word().upper()
     
+    # check if a letter is in the word
     def check_if_letters_in_word(self, guess):       
+        global letters_in_word
         letters_in_word = []
         
         for letter in guess:
@@ -32,6 +34,7 @@ class UIFunctions(MainWindow):
         print(letters_in_word)
         print(UIFunctions.random_word)
        
+    # set the previous guess label 
     def set_previous_guess(self, guess):
         self.ui.label_previous_guess_1.setText(guess[0])
         self.ui.label_previous_guess_2.setText(guess[1])
@@ -39,10 +42,33 @@ class UIFunctions(MainWindow):
         self.ui.label_previous_guess_4.setText(guess[3])
         self.ui.label_previous_guess_5.setText(guess[4])
     
-    def get_guess(self):
-        guess = self.ui.entry_guess.text().upper()
-        # self.ui.label_previous_guess.setText(guess)
+    def set_yellow(self, label):
+        label.setStyleSheet("""
+                             QLabel {
+                                 color: rgb(255, 255, 0);
+                                 font: 40px "Adam Bold";
+                                 background-color: rgba(0, 0, 0,0);
+                             }
+                             
+                             """)        
+    
+    def check_if_yellow(self, guess, letters_in_word):
+        if guess[0] in letters_in_word:
+            UIFunctions.set_yellow(self, self.ui.label_previous_guess_1)
+        if guess[1] in letters_in_word:
+            UIFunctions.set_yellow(self, self.ui.label_previous_guess_2)
+        if guess[2] in letters_in_word:
+            UIFunctions.set_yellow(self, self.ui.label_previous_guess_3)
+        if guess[3] in letters_in_word:
+            UIFunctions.set_yellow(self, self.ui.label_previous_guess_4)
+        if guess[4] in letters_in_word:
+            UIFunctions.set_yellow(self, self.ui.label_previous_guess_5)
         
+    # get the guess
+    def get_guess(self):
+        global letters_in_word
+        guess = self.ui.entry_guess.text().upper()
+
         UIFunctions.check_if_letters_in_word(self, guess)
         UIFunctions.set_previous_guess(self, guess)
-    
+        UIFunctions.check_if_yellow(self, guess, letters_in_word)
