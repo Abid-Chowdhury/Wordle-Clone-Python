@@ -52,7 +52,6 @@
       <font>
        <family>Adam Bold</family>
        <pointsize>-1</pointsize>
-       <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
        <stylestrategy>PreferAntialias</stylestrategy>
@@ -85,7 +84,6 @@
       <font>
        <family>Adam Bold</family>
        <pointsize>-1</pointsize>
-       <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
        <stylestrategy>PreferAntialias</stylestrategy>
@@ -134,29 +132,6 @@
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QLabel" name="label_previous_guess">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>90</y>
-       <width>500</width>
-       <height>70</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QLabel {
-	color: rgb(150,150,150);
-	font: 40px &quot;Adam Bold&quot;;
-	background-color: rgba(0,0,0,0)
-}</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
     <widget class="QPushButton" name="button_guess">
      <property name="geometry">
       <rect>
@@ -177,6 +152,7 @@
 QPushButton::hover {
 	font: 42px &quot;Adam Bold&quot;
 }
+
 </string>
      </property>
      <property name="text">
@@ -244,6 +220,126 @@ QPushButton::hover {
      </property>
      <property name="text">
       <string>Github.com/Abid-Chowdhury</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_previous_guess_1">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>90</y>
+       <width>70</width>
+       <height>70</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+	color: rgb(150,150,150);
+	font: 40px &quot;Adam Bold&quot;;
+	background-color: rgba(0,0,0,0);
+
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_previous_guess_3">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>90</y>
+       <width>70</width>
+       <height>70</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+	color: rgb(150,150,150);
+	font: 40px &quot;Adam Bold&quot;;
+	background-color: rgba(0,0,0,0);
+	
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_previous_guess_4">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>90</y>
+       <width>70</width>
+       <height>70</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+	color: rgb(150,150,150);
+	font: 40px &quot;Adam Bold&quot;;
+	background-color: rgba(0,0,0,0);
+
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_previous_guess_5">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>90</y>
+       <width>70</width>
+       <height>70</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+	color: rgb(150,150,150);
+	font: 40px &quot;Adam Bold&quot;;
+	background-color: rgba(0,0,0,0);
+
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_previous_guess_2">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>90</y>
+       <width>70</width>
+       <height>70</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+	color: rgb(150,150,150);
+	font: 40px &quot;Adam Bold&quot;;
+	background-color: rgba(0,0,0,0);
+
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
    </widget>
