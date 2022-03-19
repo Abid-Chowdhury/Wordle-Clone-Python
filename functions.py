@@ -22,7 +22,7 @@ class UIFunctions(MainWindow):
     
     random_word = get_random_word().upper()
     
-    def check_if_letters_in_word(self,guess):       
+    def check_if_letters_in_word(self, guess):       
         letters_in_word = []
         
         for letter in guess:
@@ -31,13 +31,18 @@ class UIFunctions(MainWindow):
         
         print(letters_in_word)
         print(UIFunctions.random_word)
-        
+       
+    def set_previous_guess(self, guess):
+        self.ui.label_previous_guess_1.setText(guess[0])
+        self.ui.label_previous_guess_2.setText(guess[1])
+        self.ui.label_previous_guess_3.setText(guess[2])
+        self.ui.label_previous_guess_4.setText(guess[3])
+        self.ui.label_previous_guess_5.setText(guess[4])
+    
     def get_guess(self):
         guess = self.ui.entry_guess.text().upper()
-        self.ui.label_previous_guess.setText(guess)
+        # self.ui.label_previous_guess.setText(guess)
         
-        self.ui.label_previous_guess.setText(f'<html><head/><body><p><span style="color: red">{guess}</span></p></body></html>')
-        
-        UIFunctions.check_if_letters_in_word(self,guess)
-        
+        UIFunctions.check_if_letters_in_word(self, guess)
+        UIFunctions.set_previous_guess(self, guess)
     
