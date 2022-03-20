@@ -171,7 +171,7 @@ class Ui_MainWindow(object):
     # setupUi
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Wordle", None))
         self.label_title.setText(QCoreApplication.translate("MainWindow", u"WORDLE", None))
         self.button_guess.setText(QCoreApplication.translate("MainWindow", u"GUESS", None))
         self.button_minimize.setText("")

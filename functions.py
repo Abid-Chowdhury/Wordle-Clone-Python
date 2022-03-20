@@ -99,4 +99,3 @@ class UIFunctions(MainWindow):
         UIFunctions.set_previous_guess(self, guess)
         UIFunctions.check_if_yellow(self, guess, UIFunctions.random_word)
         UIFunctions.check_if_green(self, guess, UIFunctions.random_word)
-        print(UIFunctions.random_word)

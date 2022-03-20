@@ -51,8 +51,11 @@ class MainWindow(QMainWindow):
         
     def mousePressEvent(self, event):
         self.dragPos = event.globalPos()
-        
+                    
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = MainWindow()
     sys.exit(app.exec_())
+
+    
+    
