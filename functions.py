@@ -93,9 +93,13 @@ class UIFunctions(MainWindow):
     
     # get the guess
     def get_guess(self):
-        guess = self.ui.entry_guess.text().upper()
+        try:
+            guess = self.ui.entry_guess.text().upper()
 
-        UIFunctions.reset_colors(self)
-        UIFunctions.set_previous_guess(self, guess)
-        UIFunctions.check_if_yellow(self, guess, UIFunctions.random_word)
-        UIFunctions.check_if_green(self, guess, UIFunctions.random_word)
+            UIFunctions.reset_colors(self)
+            UIFunctions.set_previous_guess(self, guess)
+            UIFunctions.check_if_yellow(self, guess, UIFunctions.random_word)
+            UIFunctions.check_if_green(self, guess, UIFunctions.random_word)
+        except IndexError:
+            pass
+            
