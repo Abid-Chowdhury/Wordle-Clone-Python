@@ -79,7 +79,10 @@ class Ui_MainWindow(object):
 "	background-color: white;\n"
 "	font: 40px \"Adam Bold\";\n"
 "	border-radius: 15px;\n"
+"       padding-top: 5px;\n"
 "}\n"
+"QPushButton::hover {\n"
+"        border: 2px solid rgb(25,25,25)}"
 "")
         self.button_minimize = QPushButton(self.frame)
         self.button_minimize.setObjectName(u"button_minimize")
