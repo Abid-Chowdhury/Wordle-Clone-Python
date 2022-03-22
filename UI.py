@@ -92,7 +92,7 @@ class Ui_MainWindow(object):
         self.button_minimize.setObjectName(u"button_minimize")
         self.button_minimize.setGeometry(QRect(440, 15, 15, 15))
         self.button_minimize.setStyleSheet(u"QPushButton {\n"
-"	background-color: rgb(225,225,0);\n"
+"	background-color: rgb(200,200,0);\n"
 "	border-radius: 7px;\n"
 "}\n"
 "QPushButton::hover {\n"
