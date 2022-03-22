@@ -21,7 +21,7 @@ class UIFunctions(MainWindow):
         return word
     
     random_word = get_random_word().upper()
-       
+    print(random_word)
     # set the previous guess label 
     def set_previous_guess(self, guess):
         self.ui.label_previous_guess_1.setText(guess[0])
@@ -52,6 +52,21 @@ class UIFunctions(MainWindow):
         if guess[4] in word:
             UIFunctions.set_yellow(self, self.ui.label_previous_guess_5)
 
+    # win function
+    def win(self):
+        self.ui.entry_guess.setStyleSheet("""
+                                          QLineEdit {
+                                              color: rgb(0, 255, 0);
+                                              background-color: rgba(0, 0, 0,0);
+                                              border: 2px solid rgb(0, 255, 0);
+                                              border-radius: 15px;
+                                              font: 50px "Adam Bold";
+                                              text-transform: uppercase;
+                                              }
+                                          
+                                          """)
+        self.ui.entry_guess.setReadOnly(True)
+    
     # set label to green
     def set_green(self, label):
         label.setStyleSheet("""
@@ -63,17 +78,27 @@ class UIFunctions(MainWindow):
                              """)           
     
     def check_if_green(self, guess, word):
+        score = 0
+        
         if guess[0] == word[0]:
             UIFunctions.set_green(self, self.ui.label_previous_guess_1)
+            score += 1
         if guess[1] == word[1]:
             UIFunctions.set_green(self, self.ui.label_previous_guess_2)
+            score += 1
         if guess[2] == word[2]:
             UIFunctions.set_green(self, self.ui.label_previous_guess_3)
+            score += 1
         if guess[3] == word[3]:
             UIFunctions.set_green(self, self.ui.label_previous_guess_4)
+            score += 1
         if guess[4] == word[4]:
             UIFunctions.set_green(self, self.ui.label_previous_guess_5)
+            score += 1
         
+        if score == 5:
+            UIFunctions.win(self)
+            
     # reset colors before each guess
     def set_gray(self, label):
         label.setStyleSheet("""
