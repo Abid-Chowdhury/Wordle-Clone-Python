@@ -107,13 +107,13 @@ class Ui_MainWindow(object):
         self.button_credit.setObjectName(u"button_credit")
         self.button_credit.setGeometry(QRect(0, 360, 500, 30))
         self.button_credit.setStyleSheet(u"QPushButton {\n"
-"	color: white;\n"
+"	color: rgb(225,225,225);\n"
 "	font: 20px \"Adam Bold\";\n"
 "	border-radius: 15px;\n"
 "}\n"
 "\n"
 "QPushButton::hover {\n"
-"	font: 21px \"Adam Bold\"\n"
+"	color: rgb(255,255,255)"
 "}")
         self.label_previous_guess_1 = QLabel(self.frame)
         self.label_previous_guess_1.setObjectName(u"label_previous_guess_1")
