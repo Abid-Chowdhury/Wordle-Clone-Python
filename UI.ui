@@ -147,16 +147,29 @@
 	background-color: white;
 	font: 40px &quot;Adam Bold&quot;;
 	border-radius: 15px;
+	padding-top: 5px
 }
 
 QPushButton::hover {
-	font: 42px &quot;Adam Bold&quot;
+	border: 2px solid rgb(25,25,25);
 }
 
 </string>
      </property>
      <property name="text">
       <string>GUESS</string>
+     </property>
+     <property name="checkable">
+      <bool>false</bool>
+     </property>
+     <property name="autoExclusive">
+      <bool>false</bool>
+     </property>
+     <property name="autoDefault">
+      <bool>false</bool>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
      </property>
     </widget>
     <widget class="QPushButton" name="button_minimize">

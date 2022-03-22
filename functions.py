@@ -93,7 +93,7 @@ class UIFunctions(MainWindow):
     
     # get the guess
     def get_guess(self):
-        try:
+        try:  
             guess = self.ui.entry_guess.text().upper()
 
             UIFunctions.reset_colors(self)

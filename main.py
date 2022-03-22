@@ -1,4 +1,3 @@
-import platform
 import sys
 
 from PySide2 import QtCore, QtGui, QtWidgets

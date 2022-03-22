@@ -71,19 +71,23 @@ class Ui_MainWindow(object):
         self.entry_guess.setReadOnly(False)
         self.entry_guess.setCursorMoveStyle(Qt.LogicalMoveStyle)
         self.entry_guess.setClearButtonEnabled(False)
+        
+        
         self.button_guess = QPushButton(self.frame)
         self.button_guess.setObjectName(u"button_guess")
         self.button_guess.setGeometry(QRect(150, 260, 200, 60))
         self.button_guess.setStyleSheet(u"QPushButton {\n"
 "	color: black;\n"
-"	background-color: white;\n"
+"	background-color: rgb(225,225,225);\n"
 "	font: 40px \"Adam Bold\";\n"
 "	border-radius: 15px;\n"
 "       padding-top: 5px;\n"
 "}\n"
 "QPushButton::hover {\n"
-"        border: 2px solid rgb(25,25,25)}"
+"        background-color: rgb(255,255,255);\n}"
 "")
+        
+        
         self.button_minimize = QPushButton(self.frame)
         self.button_minimize.setObjectName(u"button_minimize")
         self.button_minimize.setGeometry(QRect(440, 15, 15, 15))
