@@ -102,9 +102,12 @@ class Ui_MainWindow(object):
         self.button_close.setObjectName(u"button_close")
         self.button_close.setGeometry(QRect(470, 15, 15, 15))
         self.button_close.setStyleSheet(u"QPushButton {\n"
-"	background-color: #ff0000;\n"
+"	background-color: rgb(200,0,0);\n"
 "	border-radius: 7px\n"
-"}")
+"}"
+"QPushButton::hover {\n"
+"        background-color: rgb(255,0,0);\n}"
+)
         self.button_credit = QPushButton(self.frame)
         self.button_credit.setObjectName(u"button_credit")
         self.button_credit.setGeometry(QRect(0, 360, 500, 30))
