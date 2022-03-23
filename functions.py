@@ -2,7 +2,7 @@ from main import *
 from UI import *
 from words import words
 from webbrowser import open
-from random import choice
+from random import choice, random
 
 class UIFunctions(MainWindow):
     
@@ -22,6 +22,7 @@ class UIFunctions(MainWindow):
     
     random_word = get_random_word().upper()
     print(random_word)
+    
     # set the previous guess label 
     def set_previous_guess(self, guess):
         self.ui.label_previous_guess_1.setText(guess[0])
@@ -66,7 +67,7 @@ class UIFunctions(MainWindow):
                                           
                                           """)
         self.ui.entry_guess.setReadOnly(True)
-    
+        
     # set label to green
     def set_green(self, label):
         label.setStyleSheet("""
@@ -116,11 +117,38 @@ class UIFunctions(MainWindow):
         UIFunctions.set_gray(self, self.ui.label_previous_guess_4)
         UIFunctions.set_gray(self, self.ui.label_previous_guess_5)
     
+    # keep track of tries
+    tries = 0
+    
+    # reset game
+    def reset_game(self):
+        self.ui.entry_guess.setStyleSheet("""
+                                          QLineEdit {
+                                              color: rgb(255, 255, 255);
+                                              background-color: rgba(0, 0, 0,0);
+                                              border: 2px solid rgb(255, 255, 255);
+                                              border-radius: 15px;
+                                              font: 50px "Adam Bold";
+                                              text-transform: uppercase;
+                                              }
+                                          
+                                          """)
+        self.ui.entry_guess.setReadOnly(False)
+        self.ui.entry_guess.setText('')
+        UIFunctions.random_word = UIFunctions.get_random_word().upper()
+        print(UIFunctions.random_word)
+        UIFunctions.tries = 0
+        UIFunctions.reset_colors(self)
+        UIFunctions.set_previous_guess(self, '')
+    
     # get the guess
     def get_guess(self):
         try:  
             guess = self.ui.entry_guess.text().upper()
 
+            UIFunctions.tries += 1
+            print(UIFunctions.tries)
+            
             UIFunctions.reset_colors(self)
             UIFunctions.set_previous_guess(self, guess)
             UIFunctions.check_if_yellow(self, guess, UIFunctions.random_word)
