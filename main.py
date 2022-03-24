@@ -26,6 +26,7 @@ class MainWindow(QMainWindow):
         self.setAttribute(Qt.WA_TranslucentBackground)   
         
         self.ui.button_restart.setVisible(False)
+        self.ui.label_tries.setVisible(False)
         
         # move window
         def move_window(event):
@@ -47,7 +48,7 @@ class MainWindow(QMainWindow):
         self.ui.button_minimize.clicked.connect(lambda: UIFunctions.minimize_window(self))
         self.ui.button_credit.clicked.connect(lambda: UIFunctions.credit_button())
         self.ui.button_guess.clicked.connect(lambda: UIFunctions.get_guess(self))
-        
+        self.ui.button_restart.clicked.connect(lambda: UIFunctions.reset_game(self))
         # show the window
         self.show()
         

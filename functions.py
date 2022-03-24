@@ -53,8 +53,15 @@ class UIFunctions(MainWindow):
         if guess[4] in word:
             UIFunctions.set_yellow(self, self.ui.label_previous_guess_5)
 
+    def set_tries_label(self, tries):
+        self.ui.label_tries.setText(f'Tries\n{str(tries)}')
+
     # win function
     def win(self):
+        UIFunctions.set_tries_label(self, UIFunctions.tries)
+        
+        self.ui.label_tries.setVisible(True)
+        UIFunctions.set_previous_guess(self, '     ')
         self.ui.entry_guess.setStyleSheet("""
                                           QLineEdit {
                                               color: rgb(0, 255, 0);
@@ -136,13 +143,16 @@ class UIFunctions(MainWindow):
                                           
                                           """)
         self.ui.entry_guess.setReadOnly(False)
+        self.ui.label_tries.setVisible(False)
         self.ui.entry_guess.setText('')
         UIFunctions.random_word = UIFunctions.get_random_word().upper()
         print(UIFunctions.random_word)
         UIFunctions.tries = 0
         UIFunctions.reset_colors(self)
-        UIFunctions.set_previous_guess(self, '')
-    
+        UIFunctions.set_previous_guess(self, '     ')
+        self.ui.button_guess.setVisible(True)
+        self.ui.button_restart.setVisible(False)
+        
     # get the guess
     def get_guess(self):
         try:  

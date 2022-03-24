@@ -72,7 +72,6 @@ class Ui_MainWindow(object):
         self.entry_guess.setCursorMoveStyle(Qt.LogicalMoveStyle)
         self.entry_guess.setClearButtonEnabled(False)
         
-        
         self.button_guess = QPushButton(self.frame)
         self.button_guess.setObjectName(u"button_guess")
         self.button_guess.setGeometry(QRect(150, 260, 200, 60))
@@ -182,6 +181,23 @@ class Ui_MainWindow(object):
 "\n"
 "}")
         self.label_previous_guess_2.setAlignment(Qt.AlignCenter)
+        
+        self.label_tries = QLabel(self.frame)
+        self.label_tries.setObjectName(u"label_tries")
+        self.label_tries.setGeometry(QRect(0, 75, 500, 80))
+        font = QFont()
+        font.setFamily(u"Adam Bold")
+        font.setBold(False)
+        font.setItalic(False)
+        font.setStyleStrategy(QFont.PreferAntialias)
+        self.label_tries.setFont(font)
+        self.label_tries.setStyleSheet(u"QLabel {\n"
+"	color: rgb(0,255,0);\n"
+"	font: 40px  \"Adam Bold\";\n"
+"	background: none\n"
+"}")
+        self.label_tries.setAlignment(Qt.AlignCenter)
+        
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -192,6 +208,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Wordle", None))
         self.label_title.setText(QCoreApplication.translate("MainWindow", u"WORDLE", None))
+        self.label_tries.setText("")
         self.button_guess.setText(QCoreApplication.translate("MainWindow", u"GUESS", None))
         self.button_restart.setText(QCoreApplication.translate("MainWindow", u"RESTART", None))
         self.button_minimize.setText("")
