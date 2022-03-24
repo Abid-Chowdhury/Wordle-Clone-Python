@@ -25,6 +25,8 @@ class MainWindow(QMainWindow):
         self.setWindowFlag(Qt.WindowStaysOnTopHint)
         self.setAttribute(Qt.WA_TranslucentBackground)   
         
+        self.ui.button_restart.setVisible(False)
+        
         # move window
         def move_window(event):
             # restore before moving

@@ -86,7 +86,19 @@ class Ui_MainWindow(object):
 "QPushButton::hover {\n"
 "        background-color: rgb(255,255,255);\n}"
 "")
-        
+        self.button_restart = QPushButton(self.frame)
+        self.button_restart.setObjectName(u"button_restart")
+        self.button_restart.setGeometry(QRect(150, 260, 200, 60))
+        self.button_restart.setStyleSheet(u"QPushButton {\n"
+"	color: black;\n"
+"	background-color: rgb(225,225,225);\n"
+"	font: 40px \"Adam Bold\";\n"
+"	border-radius: 15px;\n"
+"       padding-top: 5px;\n"
+"}\n"
+"QPushButton::hover {\n"
+"        background-color: rgb(255,255,255);\n}"
+"")
         
         self.button_minimize = QPushButton(self.frame)
         self.button_minimize.setObjectName(u"button_minimize")
@@ -181,6 +193,7 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Wordle", None))
         self.label_title.setText(QCoreApplication.translate("MainWindow", u"WORDLE", None))
         self.button_guess.setText(QCoreApplication.translate("MainWindow", u"GUESS", None))
+        self.button_restart.setText(QCoreApplication.translate("MainWindow", u"RESTART", None))
         self.button_minimize.setText("")
         self.button_close.setText("")
         self.button_credit.setText(QCoreApplication.translate("MainWindow", u"Github.com/Abid-Chowdhury", None))
