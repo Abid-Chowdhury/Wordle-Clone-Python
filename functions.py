@@ -68,6 +68,7 @@ class UIFunctions(MainWindow):
                                           """)
         self.ui.entry_guess.setReadOnly(True)
         self.ui.button_guess.setVisible(False)
+        self.ui.button_restart.setVisible(True)
         
     # set label to green
     def set_green(self, label):
